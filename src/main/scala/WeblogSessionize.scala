@@ -107,7 +107,7 @@ object WeblogSessionize {
         col("user_agent")).cache
 
     web_log_with_session_id.show(false)
-    //web_log_with_session_id.write.csv(output_path+"/web_log_with_session_id")
+    web_log_with_session_id.write.csv(output_path+"/web_log_with_session_id")
 
     // ------------- Q2 : Determine the average session time ----------------- //
     web_log_with_session_id.select(avg("duration").alias("average session time")).show(false)
